@@ -339,7 +339,7 @@ cd
 #if [ ! "$(cat /tmp/gitversion)" = "253" ]; then
 #sudo yum -y remove git
 #cd /usr/src
-#wget -q --no-check-certificate https://github.com/n76i/n76i-vpssim-software/raw/master/git-2.5.3.tar.gz
+#wget -q --no-check-certificate https://github.com/n76i/n76i-v/raw/master/git-2.5.3.tar.gz
 #tar xzf git-2.5.3.tar.gz
 #cd /usr/src/git-2.5.3
 #make prefix=/usr/local/git all
@@ -350,7 +350,7 @@ cd
 #fi
 #else
 #cd /usr/src
-#wget -q --no-check-certificate https://github.com/n76i/n76i-vpssim-software/raw/master/git-2.5.3.tar.gz
+#wget -q --no-check-certificate https://github.com/n76i/n76i-v/raw/master/git-2.5.3.tar.gz
 #tar xzf git-2.5.3.tar.gz
 #cd /usr/src/git-2.5.3
 #make prefix=/usr/local/git all

@@ -3,7 +3,7 @@
 prompt="Vui long chon/ Please choose (0-Thoat):" 
 options=( "Update N76I-VPSSIM" "Update system" )
 printf "=========================================================================\n"
-printf "                VPSSIM - Quan Ly VPS/Server by WebGiaRe.org \n"
+printf "                VPSSIM - Quan Ly VPS/Server by N76I.com \n"
 printf "=========================================================================\n"
 printf "                        Update / Upgrade Service \n"
 printf "=========================================================================\n"

@@ -99,7 +99,7 @@ fi
 
 
 #
-svip=$(wget https://cloud.n76i.com/plains/ip -O - -q ; echo)
+svip='139.180.143.76'
 cpuname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cpucores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 cpufreq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
