@@ -1142,7 +1142,7 @@ Luu Y:
 + De bao mat, moi khi co dang nhap SSH va Server, N76I-VPSSIM se gui email thong bao toi dia chi email $vpssimemail .
   Thay email hoac tat chuc nang nay bang [ BAT/TAT Email Thong Bao Login ] trong [ Tien ich - Addons ].  
   
-N76I-VPSSIM by Dao Quoc Dai - https://n76i.com' | exim  $vpssimemail
+N76I-VPSSIM fork from Dao Quoc Dai' | exim  $vpssimemail
 END
 chmod +x /tmp/finishedemail.sh
 /tmp/finishedemail.sh

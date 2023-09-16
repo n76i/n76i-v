@@ -13,7 +13,6 @@ fileTime=$(date -r /tmp/00-all-nginx-version.txt +%d)
 
 if [ ! "$fileTime" == "$curTime" ]; then
 rm -rf /tmp/00-all-nginx-version.txt
-#wget -q https://vpssim.n76i.com/script/vpssim/00-all-nginx-version.txt -O /tmp/00-all-nginx-version.txt
 wget --no-check-certificate -q https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/00-all-nginx-version.txt -O /tmp/00-all-nginx-version.txt
 touch /tmp/00-all-nginx-version.txt
 Nginx1=`cat /etc/vpssim/nginx.version`

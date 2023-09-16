@@ -4,7 +4,7 @@ cd ~
 mkdir -p /etc/nginx/conf
 
 download_n76i_nginx_config(){
-wget --no-check-certificate -q "https://n76i.com/server/conf/index.php?file=$1&download=1&rand=1" -O /etc/nginx/conf/$1.conf
+wget --no-check-certificate -q "https://echbay.com/server/conf/index.php?file=$1&download=1&rand=1" -O /etc/nginx/conf/$1.conf
 chmod 755 /etc/nginx/conf/$1.conf
 }
 #download_n76i_nginx_config "ddos1"
@@ -16,7 +16,7 @@ download_n76i_nginx_config "staticfiles"
 download_n76i_nginx_config "drop"
 
 #
-wget --no-check-certificate -q "https://n76i.com/server/conf/index.php?file=ssl_ciphers_vpssim&download=1&rand=1" -O /etc/nginx/ssl_ciphers_vpssim.conf
+wget --no-check-certificate -q "https://echbay.com/server/conf/index.php?file=ssl_ciphers_vpssim&download=1&rand=1" -O /etc/nginx/ssl_ciphers_vpssim.conf
 chmod 755 /etc/nginx/ssl_ciphers_vpssim.conf
 
 #

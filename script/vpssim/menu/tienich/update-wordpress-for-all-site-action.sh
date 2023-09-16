@@ -251,7 +251,6 @@ cd ~
 
 # wordpres
 download_and_unzip_file "https://wordpress.org/latest.zip" "wp.zip" ""
-#download_and_unzip_file "https://n76i.com/daoloat/latest-vi.zip" "wp.zip" ""
 
 file_optimize(){
 f=$1
@@ -542,8 +541,8 @@ fi
 }
 
 send_warning_via_telegram(){
-	#wget --no-check-certificate -O /dev/null "https://cloud.n76i.com/backups/has_malware?source="$2"&path="$1
-	curl --data "source="$2"&path="$1 https://cloud.n76i.com/backups/has_malware
+	curl --data "source="$2"&path="$1 https://cloud.echbay.com/backups/has_malware
+	
 	echoY $2
 }
 
