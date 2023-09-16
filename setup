@@ -64,7 +64,6 @@ if [ -f /etc/yum.repos.d/epel.repo ]; then
 sudo sed -i "s/mirrorlist=https/mirrorlist=http/" /etc/yum.repos.d/epel.repo
 fi
 
-#wget -q https://vpssim.n76i.com/script/vpssim/calc -O /bin/calc && chmod +x /bin/calc
 if [ ! -f /tmp/calc ]; then
 yes | cp -rf /bin/calc /tmp/calc && chmod +x /tmp/calc
 fi
@@ -109,7 +108,6 @@ if [ "$yourlanguage" = "english" ]; then
     echo "Please wait ..."
     sleep 2
     #wget -q --no-check-certificate https://vpssim.com/script/vpssim/centos${current_os_version}/vpssim-setup && chmod +x vpssim-setup && clear && ./vpssim-setup
-    #wget -q --no-check-certificate https://vpssim.n76i.com/script/vpssim/centos${current_os_version}/vpssim-setup && chmod +x vpssim-setup && clear && ./vpssim-setup
     cd /opt/n76i_vpssim/script/vpssim/centos${current_os_version} ; chmod +x vpssim-setup ; clear ; bash vpssim-setup
     yes | cp -rf /opt/n76i_vpssim/script/vpssim/centos${current_os_version}/vpssim-setup ~/vpssim-setup ; chmod +x vpssim-setup ; clear ; bash vpssim-setup
 elif [ "$yourlanguage" = "vietnamese" ]; then
