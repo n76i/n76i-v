@@ -13,7 +13,7 @@ fi
 prompt="Lua chon cua ban (0-Backspace):"
 options=("Create FTP account" "Reset FTP password" "View FTP password" )
 printf "=========================================================================\n"
-printf "                VPSSIM - Quan Ly VPS/ Server by EchBay.com \n"
+printf "                VPSSIM - Quan Ly VPS/ Server by N76I.com \n"
 printf "=========================================================================\n"
 printf "                            Quan Ly FTP Server \n"
 printf "=========================================================================\n"

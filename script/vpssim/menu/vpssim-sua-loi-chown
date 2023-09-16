@@ -2,7 +2,7 @@
 clear
 
 printf "=========================================================================\n"
-printf "            VPSSIM - Manage VPS/ Server by EchBay.com \n"
+printf "            VPSSIM - Manage VPS/ Server by N76I.com \n"
 printf "=========================================================================\n"
 printf "                       Fix Loi chmod & chown                               \n"
 printf "=========================================================================\n"
