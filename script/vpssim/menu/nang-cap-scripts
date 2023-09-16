@@ -6,7 +6,7 @@ clear
 echo "========================================================================="
 echo "Xin loi, chung toi khong the biet phien ban hien tai cua ban"
 echo "-------------------------------------------------------------------------"
-echo "Hay chac rang ban chay script offical tu website https://github.com/itvn9online/vpssim-free"
+echo "Hay chac rang ban chay script offical tu website https://github.com/n76i/n76i-v"
 vpssim
 exit
 fi
@@ -14,7 +14,7 @@ fi
 maximumsize=10
 rm -rf /etc/vpssim/vpssim.newversion
 cd /etc/vpssim
-timeout 30 wget --no-check-certificate https://raw.githubusercontent.com/itvn9online/vpssim-free/master/version -O /etc/vpssim/vpssim.newversion
+timeout 30 wget --no-check-certificate https://raw.githubusercontent.com/n76i/n76i-v/master/version -O /etc/vpssim/vpssim.newversion
 
 cd
 if [ -f /etc/vpssim/vpssim.newversion ]; then
@@ -30,7 +30,7 @@ fi
 if [ ! -f /etc/vpssim/vpssim.newversion ]; then
 clear
 printf "=========================================================================\n"
-echo "Khong the kiem tra phien ban update ECHBAY-VPSSIM"
+echo "Khong the kiem tra phien ban update N76I-VPSSIM"
 echo "-------------------------------------------------------------------------"
 echo "Ban vui long thu lai"
 if [ "$(rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release))" == "7" ]; then
@@ -51,11 +51,11 @@ if [ "$LOCALVER" == "$REMOVER" ]; then
 clear
 rm -rf /etc/vpssim/vpssim.newversion
 echo "========================================================================="
-echo "Ban dang su dung phien ban moi nhat cua ECHBAY-VPSSIM - Phien ban: $LOCALVER"
+echo "Ban dang su dung phien ban moi nhat cua N76I-VPSSIM - Phien ban: $LOCALVER"
 echo "-------------------------------------------------------------------------"
-echo "Xem ECHBAY-VPSSIM update Log tai: https://github.com/itvn9online/vpssim-free"
+echo "Xem N76I-VPSSIM update Log tai: https://github.com/n76i/n76i-v"
 
-echo -n "Ban van muon cap nhat lai ECHBAY-VPSSIM chu? [y/N] "
+echo -n "Ban van muon cap nhat lai N76I-VPSSIM chu? [y/N] "
 read vanCapNhat
 if [ "$vanCapNhat" = "y" ]; then
 echo "OK sir! tien trinh cap nhat se duoc tiep tuc..."
@@ -73,9 +73,9 @@ fi
 fi
 
 printf "=========================================================================\n"
-printf "Xem ECHBAY-VPSSIM update Log tai: https://github.com/itvn9online/vpssim-free\n"
+printf "Xem N76I-VPSSIM update Log tai: https://github.com/n76i/n76i-v\n"
 printf "=========================================================================\n"
-printf "Da phat hien update cho ECHBAY-VPSSIM\n"
+printf "Da phat hien update cho N76I-VPSSIM\n"
 echo "-------------------------------------------------------------------------"
 printf "Phien ban ban dang su dung: $LOCALVER\n"
 echo "-------------------------------------------------------------------------"
@@ -85,16 +85,16 @@ printf "========================================================================
 if [ "$chuaCoBanMoi" = "y" ]; then
 response="y"
 else
-read -r -p "Ban chac chan muon update ECHBAY-VPSSIM ? [y/N] " response
+read -r -p "Ban chac chan muon update N76I-VPSSIM ? [y/N] " response
 fi
 
 if [ "$response" = "y" ] || [ "$response" = "Y" ]; then
 echo "-------------------------------------------------------------------------" 
-echo "Chuan bi update ECHBAY-VPSSIM..... "
+echo "Chuan bi update N76I-VPSSIM..... "
 sleep 1
 
 rm -rf /etc/vpssim/vpssim-update
-wget --no-check-certificate https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/vpssim/vpssim-update -O /etc/vpssim/vpssim-update
+wget --no-check-certificate https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/vpssim-update -O /etc/vpssim/vpssim-update
 chmod +x /etc/vpssim/vpssim-update
 bash /etc/vpssim/vpssim-update
 
@@ -102,7 +102,7 @@ else
 
 clear
 printf "=========================================================================\n"
-echo "Ban da huy bo update ECHBAY-VPSSIM"
+echo "Ban da huy bo update N76I-VPSSIM"
 if [ "$(rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release))" == "7" ]; then
 /etc/vpssim/menu/vpssim-update-upgrade-service-menu
 else

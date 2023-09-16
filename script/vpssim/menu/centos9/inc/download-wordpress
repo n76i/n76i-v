@@ -59,7 +59,7 @@ if [ ! "$username" = "" ] && [ ! "$password" = "" ]; then
     admin_user="admindemo"
     admin_pass=`date |md5sum |cut -c '1-16'`
 
-    wp core install --url='http://'$website --title='Blog demo by ECHBAY-VPSSIM' --admin_user=$admin_user --admin_password=$admin_pass --admin_email='admin@'$website
+    wp core install --url='http://'$website --title='Blog demo by N76I-VPSSIM' --admin_user=$admin_user --admin_password=$admin_pass --admin_email='admin@'$website
 
     #
 echo "$admin_user" > /tmp/vpssim-lastadmin.txt

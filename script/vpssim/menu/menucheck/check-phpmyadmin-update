@@ -13,8 +13,8 @@ fileTime=$(date -r /tmp/00-all-phpmyadmin-version.txt +%d)
 
 if [ ! "$fileTime" == "$curTime" ]; then
 rm -rf /tmp/00-all-phpmyadmin-version.txt
-#wget -q https://vpssim.echbay.com/script/vpssim/00-all-phpmyadmin-version.txt -O /tmp/00-all-phpmyadmin-version.txt
-wget --no-check-certificate -q https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/vpssim/00-all-phpmyadmin-version.txt -O /tmp/00-all-phpmyadmin-version.txt
+#wget -q https://vpssim.n76i.com/script/vpssim/00-all-phpmyadmin-version.txt -O /tmp/00-all-phpmyadmin-version.txt
+wget --no-check-certificate -q https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/00-all-phpmyadmin-version.txt -O /tmp/00-all-phpmyadmin-version.txt
 touch /tmp/00-all-phpmyadmin-version.txt
 Nginx1=`cat /etc/vpssim/phpmyadmin.version`
 checksize=$(du -sb /tmp/00-all-phpmyadmin-version.txt | awk 'NR==1 {print $1}')
@@ -28,7 +28,7 @@ cat >> "/tmp/vpssim_check_phpmyadmin" <<END
 			echo "-------------------------------------------------------------------------"
 			echo "Your Version: $Nginx1   |   Newest version: $Nginx3"
 			echo "-------------------------------------------------------------------------"
-			echo "How to update: ECHBAY-VPSSIM menu => Update System => Change phpmyadmin Version "
+			echo "How to update: N76I-VPSSIM menu => Update System => Change phpmyadmin Version "
 			
 			fi
 		fi

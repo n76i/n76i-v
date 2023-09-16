@@ -25,7 +25,7 @@ prompt="Nhap lua chon cua ban (0-Backspace):"
 options=( "Account Manager" "Advanced Features" "Extra Features" "Security/ Firewall" "Cache" "Update System" "Site Summary / Statistics" "Help" )
 
 echo "========================================================================="
-echo "                          ECHBAY-VPSSIM Menu                             "
+echo "                          N76I-VPSSIM Menu                             "
 echo "========================================================================="
 # menu này dành cho centos 8, 9 -> chưa hoàn thiện lắm
 echo "                Phien ban thu nghiem cho CentOS 8 & 9                    "

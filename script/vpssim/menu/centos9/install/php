@@ -51,7 +51,7 @@ sed -i "s/;date.timezone.*/date.timezone = UTC/" /etc/php.ini
 
 # custom opcache config
 rm -rf /etc/php.d/*opcache*
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/conf-webserver/opcache.ini /etc/php.d/opcache.ini
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/conf-webserver/opcache.ini /etc/php.d/opcache.ini
 
 #
 systemctl restart nginx php-fpm

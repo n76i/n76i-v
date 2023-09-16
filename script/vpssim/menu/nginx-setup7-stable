@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. /opt/echbay_vpssim/script/vpssim/nginx-setup.conf
+. /opt/n76i_vpssim/script/vpssim/nginx-setup.conf
 echo $moduledir
 echo $opensslversion
 echo $withopensslopt
@@ -12,8 +12,8 @@ echo "Install after 3s"
 sleep 3
 
 
-/opt/echbay_vpssim/script/vpssim/menu/nginx-setup-download
-#/opt/echbay_vpssim/script/vpssim/menu/nang-cap-openssl-before
+/opt/n76i_vpssim/script/vpssim/menu/nginx-setup-download
+#/opt/n76i_vpssim/script/vpssim/menu/nang-cap-openssl-before
 
 
 cd

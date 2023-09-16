@@ -1,14 +1,7 @@
-## Diễn Đàn Hỗ Trợ Và Xử Lý Bug:
-
-### [https://www.facebook.com/groups/wordpresseb](https://www.facebook.com/groups/wordpresseb)
-
-ECHBAY-VPSSIM là bản chỉnh sửa lại từ VPSSIM-3.8.1, đây là phiên bản cuối cùng của VPSSIM mà mình clone lại được trước khi VPSSIM tiến hành mã hóa và thương mại hóa.
-Cơ bản thì trong phiên bản ECHBAY-VPSSIM mình chủ yếu cập nhật lại một số phiên bản phần mềm trong cài đặt mặc định lên bản mới và ổn định nhất cho phù hợp với thời điểm 2020 và hỗ trợ các hệ điều hành mới hơn như CentOS 7 & 8 thay vì tập trung vào CentOS 6 như phiên bản gốc.
-
-### Lệnh Cài Đặt ECHBAY-VPSSIM:
+### Lệnh Cài Đặt N76I-VPSSIM:
 
 ```
-bash <( curl -k https://raw.githubusercontent.com/itvn9online/vpssim-free/master/install )
+bash <( curl -k https://raw.githubusercontent.com/n76i/n76i-v/master/install )
 ```
 
 #### OS Hỗ trợ: `CentOS 7` `CentOS 8` `CentOS 9` `AlmaLinux 8` `AlmaLinux 9` (Without SELinux):
@@ -16,41 +9,41 @@ bash <( curl -k https://raw.githubusercontent.com/itvn9online/vpssim-free/master
 ### Lệnh Cài Đặt yum-cron (auto update system):
 
 ```
-bash <( curl -k https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/yum-cron-setup )
+bash <( curl -k https://raw.githubusercontent.com/n76i/n76i-v/master/script/yum-cron-setup )
 ```
 
 ### Find and update plugin and Wordpress core for Wordpress website:
 
 ```
-bash <( curl -k https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/vpssim/menu/tienich/update-wordpress-for-all-site )
+bash <( curl -k https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/menu/tienich/update-wordpress-for-all-site )
 ```
 
 ### Find and Scan malware for Wordpress website:
 
 ```
-bash <( curl -k https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/vpssim/menu/tienich/scan-wordpress-malware.sh )
+bash <( curl -k https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/menu/tienich/scan-wordpress-malware.sh )
 ```
 
 ---
 
 ### Phiên bản hệ điều hành khuyên dùng:
 
-- [ ] `AlmaLinux 9 x64` Mã nguồn ECHBAY-VPSSIM hiện tại đang hỗ trợ cả `AlmaLinux 9 x64`.
-- [ ] `AlmaLinux 8 x64` Mã nguồn ECHBAY-VPSSIM hiện tại đang hỗ trợ cả `AlmaLinux 8 x64`.
-- [ ] **`CentOS 9 x64` Khuyên dùng để cho hiệu suất tốt nhất. Mã nguồn ECHBAY-VPSSIM hiện tại đang phát triển chính trên `CentOS 9 x64`.**
-- [ ] `CentOS 8 x64` Mã nguồn ECHBAY-VPSSIM hiện tại đang hỗ trợ cả `CentOS 8 x64`.
+- [ ] `AlmaLinux 9 x64` Mã nguồn N76I-VPSSIM hiện tại đang hỗ trợ cả `AlmaLinux 9 x64`.
+- [ ] `AlmaLinux 8 x64` Mã nguồn N76I-VPSSIM hiện tại đang hỗ trợ cả `AlmaLinux 8 x64`.
+- [ ] **`CentOS 9 x64` Khuyên dùng để cho hiệu suất tốt nhất. Mã nguồn N76I-VPSSIM hiện tại đang phát triển chính trên `CentOS 9 x64`.**
+- [ ] `CentOS 8 x64` Mã nguồn N76I-VPSSIM hiện tại đang hỗ trợ cả `CentOS 8 x64`.
 
 ---
 
 ### Danh sách các phiên bản kết hợp đã qua quá trình cài đặt thử nghiệm thành công:
 
-> Với ~~`CentOS 6 x64`~~ đã chạy thực nghiệm từ nhiều năm nay và cho kết quả ổn định, nên ở mục này chủ yếu thống kê cho phiên bản CentOS 7 & 8 và ECHBAY-VPSSIM cũng chỉ hỗ trợ phiên bản x64 chứ không hỗ trợ x32 như VPSSIM bản gốc.
+> Với ~~`CentOS 6 x64`~~ đã chạy thực nghiệm từ nhiều năm nay và cho kết quả ổn định, nên ở mục này chủ yếu thống kê cho phiên bản CentOS 7 & 8 và N76I-VPSSIM cũng chỉ hỗ trợ phiên bản x64 chứ không hỗ trợ x32 như VPSSIM bản gốc.
 
 > 2023/06/05
 
 - [x] `CentOS 7 x64` Tháng 06/2023 cơ bản sẽ dừng phát triển trên `CentOS 7`, tập trung cho các OS mới hơn.
 
-- [ ] ~~`CentOS 6 x64`~~ VPSSIM được phát triển trên phiên bản CentOS 6 x64, do ECHBAY-VPSSIM kế thừa mã nguồn của VPSSIM nên ECHBAY-VPSSIM cũng hoạt động tốt trên CentOS 6 x64, nên nếu có yêu cầu bắt buộc phải dùng CentOS 6 thì bạn có thể hoàn toàn yên tâm sử dụng, chỉ là về lâu dài thì các phiên bản cũ sẽ trờ nên lỗi thời, nên ECHBAY-VPSSIM chỉ phát triển từ CentOS 7 & 8.
+- [ ] ~~`CentOS 6 x64`~~ VPSSIM được phát triển trên phiên bản CentOS 6 x64, do N76I-VPSSIM kế thừa mã nguồn của VPSSIM nên N76I-VPSSIM cũng hoạt động tốt trên CentOS 6 x64, nên nếu có yêu cầu bắt buộc phải dùng CentOS 6 thì bạn có thể hoàn toàn yên tâm sử dụng, chỉ là về lâu dài thì các phiên bản cũ sẽ trờ nên lỗi thời, nên N76I-VPSSIM chỉ phát triển từ CentOS 7 & 8.
 
 - [x] CentOS-**9** x64 && Nginx-1.22.1 + OpenSSL-3.0.7 && PHP-8.1
 - [x] **MariaDB-10.5** --- Cấu hình khuyên dùng ---------------------------------------------------
@@ -129,9 +122,9 @@ bash <( curl -k https://raw.githubusercontent.com/itvn9online/vpssim-free/master
 
 #### Thêm chức năng cài đặt Varnish Cache: https://packagecloud.io/varnishcache/
 
-#### Ngoài việc sử dụng ECHBAY-VPSSIM làm VPS chạy website thông thường, giờ đây bạn cũng có thể sử dụng để làm VPS chạy Varnish Cache rất tiện dụng. Hiện tại mình đang chạy thành công trên Varnish 4.1, bản 6.xx mới hơn chút xíu nhưng mình chưa thử nghiệm ngon lành, nên khuyên dùng vẫn là Varnish 4.1
+#### Ngoài việc sử dụng N76I-VPSSIM làm VPS chạy website thông thường, giờ đây bạn cũng có thể sử dụng để làm VPS chạy Varnish Cache rất tiện dụng. Hiện tại mình đang chạy thành công trên Varnish 4.1, bản 6.xx mới hơn chút xíu nhưng mình chưa thử nghiệm ngon lành, nên khuyên dùng vẫn là Varnish 4.1
 
-#### Mã thực thi: https://github.com/itvn9online/vpssim-free/tree/master/script/vpssim/menu/varnish
+#### Mã thực thi: https://github.com/n76i/n76i-v/tree/master/script/vpssim/menu/varnish
 
 > Cách sử dụng: Trong VPSSIM menu -> 25) Tien ich - Addons -> 23) Varnish Cache -> Chọn phiên bản Varnish mà bạn muốn cài đặt
 
@@ -145,7 +138,7 @@ bash <( curl -k https://raw.githubusercontent.com/itvn9online/vpssim-free/master
 
 #### Cập nhật OpenSSL lên bản mới nhất và build nginx từ bản này: https://linuxscriptshub.com/update-openssl-1-1-0-CentOS-6-9-7-0/
 
-#### Mã thực thi: https://github.com/itvn9online/vpssim-free/blob/master/script/vpssim/menu/nang-cap-openssl
+#### Mã thực thi: https://github.com/n76i/n76i-v/blob/master/script/vpssim/menu/nang-cap-openssl
 
 > Cách sử dụng: Trong VPSSIM menu -> 26) Update System -> 7) Thay phien phien ban OpenSSL
 
@@ -155,7 +148,7 @@ bash <( curl -k https://raw.githubusercontent.com/itvn9online/vpssim-free/master
 
 > 2020/09/01
 
-#### Nguồn cài đặt: https://github.com/itvn9online/vpssim-free/blob/master/script/vpssim/nginx-setup.conf
+#### Nguồn cài đặt: https://github.com/n76i/n76i-v/blob/master/script/vpssim/nginx-setup.conf
 
 - Cài đặt nginx-1.18.0, đây là phiên bản ổn định và mới nhất của nginx tính đến thời điểm hiện tại, kết hợp với OpenSSL-1.1.1i thay cho bản openssl cũ của VPSSIM, phiên bản này mới hỗ trợ đầy đủ HTTP/2.
   - Phiên bản nginx được xem và cập nhật tại: http://nginx.org/en/download.html . Mặc định mình chỉ chọn phiên bản Stable version, các bản Mainline là đang phát triển nên không chọn.
@@ -188,23 +181,3 @@ bash <( curl -k https://raw.githubusercontent.com/itvn9online/vpssim-free/master
 - Còn lại hầu hết các tính năng vẫn được giữ nguyên hoặc chưa có thời gian chỉnh sửa, bổ sung...
 
 ---
-
-### Giới thiệu!
-
-#### Về cơ bản thì ECHBAY-VPSSIM được hình thành do thời gian gần đây VPSSIM rất ít cập nhật và sử dụng những phần mềm quan trọng nhưng lại rất cũ so với thời đại. Ngoài ra, trong quá trình cài đặt và sử dụng có lỗi thì tác giả cũng rất lâu mới sửa, việc liên hệ với tác giả cũng rất khó nên mình quyết định từ bỏ bản mới nhất của tác giả là 4.6 để quay lại với phiên bản cũ hơn, ít tính năng hơn nhưng hầu hết những cái cần thiết với mình đều đã có.
-
-#### Quan trọng nhất thì bản VPSSIM-3.8.1 này là bản chưa mã hóa nên mình có thể xem mã nguồn và chỉnh sửa được nó theo ý muốn, theo kiến thức mà mình đã có.
-
-### Cách cài đặt:
-
-#### Cũng được mình thay đổi bằng cách cài đặt từ https://github.com/itvn9online/vpssim-free thay vì download từ nhiều nguồn khác nhau như VPSSIM. Thêm nữa khi up code lên github thì cũng có cái nhìn trực quan hơn, mọi người sẽ dễ dàng tham khảo và góp ý các thay đổi hơn cho đúng chuẩn mã nguồn mở.
-
-### Liên hệ:
-
-#### Facebok: https://www.facebook.com/ech.bay/
-
-#### Email: itvn9online@yahoo.com
-
-#### Website: https://echbay.com/
-
-#### [Mã HTML cho tệp README.md](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)

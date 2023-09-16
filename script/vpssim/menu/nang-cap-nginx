@@ -35,7 +35,7 @@ END
 
 # them lenh kiem tra neu co git roi thi thoi khong tai lai nua
 okResetGit="y"
-if [ -d /opt/echbay_vpssim ]; then
+if [ -d /opt/n76i_vpssim ]; then
 echo "========================================================================="
 echo "========================================================================="
 echo "========================================================================="
@@ -53,7 +53,7 @@ fi
 if [ "$okResetGit" = "y" ]; then
 # copy code tu file install sang
 cd ~
-wget --no-check-certificate -q https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/vpssim/menu/git-clone
+wget --no-check-certificate -q https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/menu/git-clone
 chmod +x /root/git-clone
 bash /root/git-clone
 fi
@@ -62,7 +62,7 @@ fi
 cd ~
 cd /tmp
 rm -rf 00-all-nginx-version.txt
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/00-all-nginx-version.txt 00-all-nginx-version.txt
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/00-all-nginx-version.txt 00-all-nginx-version.txt
 
 #
 cd ~
@@ -72,7 +72,7 @@ nginx -V
 #
 if [ "$nginxtype" = "stable" ]; then
 
-. /opt/echbay_vpssim/script/vpssim/nginx-setup.conf
+. /opt/n76i_vpssim/script/vpssim/nginx-setup.conf
 echo "========================================================================="
 echo "NEW nginx version: "${Nginx_VERSION}
 echo "========================================================================="
@@ -106,11 +106,11 @@ fi
 
 echo "OS Version: "$(rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release))
 if [ "$(rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release))" == "6" ]; then
-/opt/echbay_vpssim/script/vpssim/menu/nginx-setup6
+/opt/n76i_vpssim/script/vpssim/menu/nginx-setup6
 elif [ "$(rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release))" == "7" ]; then
-/opt/echbay_vpssim/script/vpssim/menu/nginx-setup7
+/opt/n76i_vpssim/script/vpssim/menu/nginx-setup7
 else
-/opt/echbay_vpssim/script/vpssim/menu/nginx-setup8
+/opt/n76i_vpssim/script/vpssim/menu/nginx-setup8
 fi
 
 cd ~
@@ -129,8 +129,8 @@ else
 service nginx restart
 fi
 
-#rm -rf /opt/echbay_vpssim/*
-#rm -rf /opt/echbay_vpssim
+#rm -rf /opt/n76i_vpssim/*
+#rm -rf /opt/n76i_vpssim
 sleep 1
 
 clear

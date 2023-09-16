@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>EchBay.com SSD Hosting</title>
+<title>N76I</title>
 <style>
 input {
 	width: 99%;
@@ -16,11 +16,7 @@ input {
 </head>
 <body>
 <div>
-	<input type="text" value="curl -sO https://vpssim.echbay.com/install && bash install" onClick="this.select();">
-</div>
-<br>
-<div>
-	<input type="text" value="yum -y install wget ; wget --no-check-certificate https://vpssim.echbay.com/install ; chmod +x install ; bash install" onClick="this.select();">
+	<input type="text" value="Hello bro!">
 </div>
 </body>
 </html>

@@ -23,7 +23,7 @@ read svport
 if [ "$svport" = "80" ] || [ "$svport" = "443" ] || [ "$svport" = "22" ] || [ "$svport" = "3306" ] || [ "$svport" = "25" ] || [ "$svport" = "465" ] || [ "$svport" = "587" ] || [ "$svport" = "21" ]; then
 svport="1241"
 echo "phpMyAdmin khong the trung voi port cua dich vu khac!"
-echo "ECHBAY-VPSSIM dat phpMyAdmin port mac dinh la: "$svport
+echo "N76I-VPSSIM dat phpMyAdmin port mac dinh la: "$svport
 echo "--------------------------------------------------------------------------"
 echo "phpMyAdmin cannot match the port of another service!"
 echo "phpMyAdmin port default set is: "$svport
@@ -99,7 +99,7 @@ fi
 
 
 #
-svip=$(wget https://cloud.echbay.com/plains/ip -O - -q ; echo)
+svip=$(wget https://cloud.n76i.com/plains/ip -O - -q ; echo)
 cpuname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cpucores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 cpufreq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )

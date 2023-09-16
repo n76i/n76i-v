@@ -3,7 +3,7 @@
 #
 cd ~
 if [ ! -f /tmp/vpssim.conf ]; then
-cd /opt/echbay_vpssim
+cd /opt/n76i_vpssim
 chmod +x install-before
 bash install-before
 cd ~
@@ -25,7 +25,7 @@ echo "==========================================================================
 #echo "--------------------------------------------------------------------------"
 #echo "khac, sau khi cai dat server xong dung chuc nang [ Change PHP Version ] "
 #echo "--------------------------------------------------------------------------"
-#echo "trong [ Update System ] cua ECHBAY-VPSSIM."
+#echo "trong [ Update System ] cua N76I-VPSSIM."
 #echo "--------------------------------------------------------------------------"
 echo "VPSSIM ho tro: PHP 8++"
 
@@ -53,8 +53,8 @@ rm -rf vpssim.newversion
 rm -rf 00-all-phpmyadmin-version.txt
 
 #
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/vpssim.newversion vpssim.newversion
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/00-all-phpmyadmin-version.txt 00-all-phpmyadmin-version.txt
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/vpssim.newversion vpssim.newversion
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/00-all-phpmyadmin-version.txt 00-all-phpmyadmin-version.txt
 
 #
 cd ~
@@ -76,7 +76,7 @@ clear
 echo "=========================================================================="
 echo "OS Version: "$(rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release))
 echo "--------------------------------------------------------------------------"
-echo "ECHBAY-VPSSIM Se Cai Dat Server Theo Thong Tin:"
+echo "N76I-VPSSIM Se Cai Dat Server Theo Thong Tin:"
 echo "Your VPS will been install with config:"
 echo "=========================================================================="
 echo "eMail Quan Ly (admin email): $vpssimemail"
@@ -94,7 +94,7 @@ echo "Nginx Version: default by server"
 echo "--------------------------------------------------------------------------"
 echo "PHP Version: 8++"
 echo "--------------------------------------------------------------------------"
-echo "ECHBAY-VPSSIM Version: $vpssim_version"
+echo "N76I-VPSSIM Version: $vpssim_version"
 echo "=========================================================================="
 
 prompt="Nhap lua chon cua ban (Please select): "
@@ -110,7 +110,7 @@ done
 
 if [ "$xacnhanthongtin" = "dongy" ]; then
 echo "--------------------------------------------------------------------------"
-echo "Chuan Bi Cai Dat ECHBAY-VPSSIM ..."
+echo "Chuan Bi Cai Dat N76I-VPSSIM ..."
 #sleep 2
 else 
 clear
@@ -181,7 +181,7 @@ mkdir -p /home/vpssim.demo/public_html
 cd /home/vpssim.demo/public_html
 
 #
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/html/install/vietnam/index.html index.html
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/html/install/vietnam/index.html index.html
 cd ~
 
 # tao thu muc log va cac file log de phong truong hop cac ung dung khong the tu tao
@@ -206,7 +206,7 @@ cd ~
 #
 #rm -rf /etc/nginx/conf.d
 mkdir -p /etc/nginx/conf.d
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/centos9/conf/vpssim.demo.txt /etc/nginx/conf.d/vpssim.demo.conf
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/centos9/conf/vpssim.demo.txt /etc/nginx/conf.d/vpssim.demo.conf
 # config
 cat > "/tmp/vpssimSetConfigFile" <<END
 #!/bin/bash 
@@ -221,17 +221,17 @@ rm -rf /tmp/vpssimSetConfigFile
 
 
 # ghi đè file nginx.conf mặc định
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/centos9/conf/nginx.txt /etc/nginx/nginx.conf
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/centos9/conf/nginx.txt /etc/nginx/nginx.conf
 
 
 #
 #rm -rf /etc/sysctl.conf
-#yes | cp -rf /opt/echbay_vpssim/script/vpssim/conf-webserver/sysctl.txt /etc/sysctl.conf
+#yes | cp -rf /opt/n76i_vpssim/script/vpssim/conf-webserver/sysctl.txt /etc/sysctl.conf
 
 
 #
 #rm -rf /etc/php-fpm.conf
-#yes | cp -rf /opt/echbay_vpssim/script/vpssim/conf-webserver/php-fpm.txt /etc/php-fpm.conf
+#yes | cp -rf /opt/n76i_vpssim/script/vpssim/conf-webserver/php-fpm.txt /etc/php-fpm.conf
 
 
 #
@@ -326,7 +326,7 @@ cat > "/home/VPSSIM-manage-info.txt" <<END
                            VPS MANAGE INFOMATION                         
 =========================================================================
 
-Calling ECHBAY-VPSSIM: vpssim
+Calling N76I-VPSSIM: vpssim
 
 phpMyAdmin: http://$svip:$svport/phpmyadmin
 MySQL root password: $passrootmysql
@@ -347,7 +347,7 @@ va su dung cac Plugin cache(wp super cache....) cho website.
 Neu VPS dang bat Zend Opcache, khi edit file PHP, do cac file php duoc cache vao RAM  
 nen ban can clear Zend Opcache de thay doi duoc cap nhat. 
 
-Chuc ban se thanh cong cung ECHBAY-VPSSIM.
+Chuc ban se thanh cong cung N76I-VPSSIM.
 =========================================================================
 END
 

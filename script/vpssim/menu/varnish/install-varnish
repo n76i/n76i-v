@@ -28,7 +28,7 @@ options=( "Varnish 4.0" "Varnish 4.1 (Khuyen dung)" "Varnish 6.0" "Varnish 6.1" 
 fi
 
 printf "=========================================================================\n"
-printf "         ECHBAY-VPSSIM - Quan Ly VPS/ Server by EchBay.com \n"
+printf "         N76I-VPSSIM - Quan Ly VPS/ Server by EchBay.com \n"
 printf "=========================================================================\n"
 printf "                           Varnish Cache\n"
 echo "========================================================================="
@@ -39,7 +39,7 @@ if [ -f /etc/vpssim/varnish.version ];then
 printf "                   Phien ban Varnish hien tai: $(cat /etc/vpssim/varnish.version) \n"
 else
 printf "                    Varnish Cache chua duoc cai dat\n"
-printf "          Hoac khong duoc cai dat thong qua ECHBAY-VPSSIM \n"
+printf "          Hoac khong duoc cai dat thong qua N76I-VPSSIM \n"
 fi
 
 echo "-------------------------------------------------------------------------"

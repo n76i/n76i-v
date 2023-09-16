@@ -40,7 +40,7 @@ rm -rf randlink-*
 cd ~
 
 #
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/Softwear/status.zip /home/vpssim.demo/public_html/${statusrandom}status.php
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/Softwear/status.zip /home/vpssim.demo/public_html/${statusrandom}status.php
 rm -rf /etc/vpssim/defaulpassword.php
 cat > "/etc/vpssim/defaulpassword.php" <<END
 <?php
@@ -80,7 +80,7 @@ cd ~
 #
 cd ~
 yes | cp /etc/vpssim/menu/centos9/tmp/index.php /home/vpssim.demo/private_html/
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/memcache.php.zip /home/vpssim.demo/private_html/${statusrandom}memcache.php
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/memcache.php.zip /home/vpssim.demo/private_html/${statusrandom}memcache.php
 
 
 # thay thông tin mới để người dùng truy cập vào xem status

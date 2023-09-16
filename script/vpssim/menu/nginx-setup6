@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. /opt/echbay_vpssim/script/vpssim/nginx-setup.conf
+. /opt/n76i_vpssim/script/vpssim/nginx-setup.conf
 echo $moduledir
 echo $opensslversion
 echo $withopensslopt
@@ -12,11 +12,11 @@ echo "Install after 3s"
 sleep 3
 
 
-/opt/echbay_vpssim/script/vpssim/menu/nginx-setup-download
+/opt/n76i_vpssim/script/vpssim/menu/nginx-setup-download
 
 
 # module for centos6 + google page speed
-urlForDownloadNginxModule="https://vpssim.echbay.com/script/vpssim/module-nginx/"
+urlForDownloadNginxModule="https://vpssim.n76i.com/script/vpssim/module-nginx/"
 
 
 install_devtoolset_gcc () {
@@ -24,11 +24,11 @@ sudo yum -y install gcc-c++ pcre-devel zlib-devel
 
 #sudo rpm --import https://linux.web.cern.ch/linux/scientific6/docs/repository/cern/slc6X/i386/RPM-GPG-KEY-cern
 #sudo rpm --import ${urlForDownloadNginxModule}RPM-GPG-KEY-cern
-sudo rpm --import /opt/echbay_vpssim/script/vpssim/module-nginx/RPM-GPG-KEY-cern
+sudo rpm --import /opt/n76i_vpssim/script/vpssim/module-nginx/RPM-GPG-KEY-cern
 
 #sudo wget -O /etc/yum.repos.d/slc6-devtoolset.repo https://linux.web.cern.ch/linux/scientific6/docs/repository/cern/devtoolset/slc6-devtoolset.repo
 #sudo wget -O /etc/yum.repos.d/slc6-devtoolset.repo ${urlForDownloadNginxModule}slc6-devtoolset.repo
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/module-nginx/slc6-devtoolset.repo /etc/yum.repos.d/slc6-devtoolset.repo
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/module-nginx/slc6-devtoolset.repo /etc/yum.repos.d/slc6-devtoolset.repo
 
 sudo yum -y install devtoolset-2-gcc-c++ devtoolset-2-binutils
 }

@@ -17,7 +17,7 @@ sleep 1
 
 # them lenh kiem tra neu co git roi thi thoi khong tai lai nua
 okResetGit="y"
-if [ -d /opt/echbay_vpssim ]; then
+if [ -d /opt/n76i_vpssim ]; then
 echo "========================================================================="
 echo "========================================================================="
 echo "========================================================================="
@@ -35,12 +35,12 @@ fi
 # copy code tu file install sang
 if [ "$okResetGit" = "y" ]; then
 cd ~
-wget --no-check-certificate -q https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/vpssim/menu/git-clone
+wget --no-check-certificate -q https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/menu/git-clone
 chmod +x /root/git-clone
 bash /root/git-clone
 fi
 
-. /opt/echbay_vpssim/script/vpssim/nginx-setup.conf
+. /opt/n76i_vpssim/script/vpssim/nginx-setup.conf
 echo "========================================================================="
 echo "NEW openssl version: "${opensslversion}
 echo "========================================================================="
@@ -58,7 +58,7 @@ echo "Ok ! please wait update "${opensslversion}" ...."
 sleep 1
 
 #
-/opt/echbay_vpssim/script/vpssim/menu/nang-cap-openssl-auto
+/opt/n76i_vpssim/script/vpssim/menu/nang-cap-openssl-auto
 
 #
 openssl version

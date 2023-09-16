@@ -14,7 +14,7 @@ if [ -f /etc/vpssim/varnish.version ];then
 printf "                   Phien ban Varnish hien tai: $(cat /etc/vpssim/varnish.version) \n"
 else
 printf "                  Varnish Cache chua duoc cai dat\n"
-printf "          Hoac khong duoc cai dat thong qua ECHBAY-VPSSIM \n"
+printf "          Hoac khong duoc cai dat thong qua N76I-VPSSIM \n"
 fi
 
 echo "-------------------------------------------------------------------------"
@@ -37,7 +37,7 @@ rm -rf /etc/yum.repos.d/varnishcache_varnish*
 rpm -qa | grep -i varnish
 rm -rf /etc/vpssim/varnish*
 #
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/conf-webserver/vpssim.demo.txt /etc/nginx/conf.d/vpssim.demo.conf
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/conf-webserver/vpssim.demo.txt /etc/nginx/conf.d/vpssim.demo.conf
 # config
 svport=$priport
 cat > "/tmp/vpssimSetConfigFile" <<END

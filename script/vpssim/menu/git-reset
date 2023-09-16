@@ -4,9 +4,9 @@ echo "-------------------------------------------------------------------------"
 echo "Ok ! please wait check reset code from git..."
 
 cd ~
-if [ -d /opt/echbay_vpssim ]; then
-rm -rf /opt/echbay_vpssim/*
-rm -rf /opt/echbay_vpssim
+if [ -d /opt/n76i_vpssim ]; then
+rm -rf /opt/n76i_vpssim/*
+rm -rf /opt/n76i_vpssim
 sleep 5
 fi
 

@@ -2,9 +2,9 @@
 
 #
 cd ~
-if [ -d /opt/echbay_vpssim ]; then
-rm -rf /opt/echbay_vpssim/*
-rm -rf /opt/echbay_vpssim
+if [ -d /opt/n76i_vpssim ]; then
+rm -rf /opt/n76i_vpssim/*
+rm -rf /opt/n76i_vpssim
 #sleep 2
 fi
 
@@ -15,7 +15,7 @@ echo "==========================================================================
 echo ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
 echo ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
 echo ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
-echo ". . . . . . . . . . . . ECHBAY-VPSSIM install. . . . . . . . . . . . . ."
+echo ". . . . . . . . . . . . N76I-VPSSIM install. . . . . . . . . . . . . ."
 echo ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
 echo ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
 echo ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ."
@@ -28,14 +28,14 @@ sudo yum -y install epel-release wget nano
 
 #
 cd ~
-wget --no-check-certificate https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/vpssim/menu/git-clone
+wget --no-check-certificate https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/menu/git-clone
 chmod +x /root/git-clone
 bash /root/git-clone
 
 # before install
 if [ ! -f /tmp/vpssim.conf ]; then
 cd ~
-cd /opt/echbay_vpssim
+cd /opt/n76i_vpssim
 chmod +x install-before
 bash install-before
 cd ~
@@ -64,7 +64,7 @@ if [ "$selinux_on_off" = "ENABLED" ]; then
         echo "Warning! php-fpm not install if SELinux enable"
 
         # neu truoc do da thu disable SELinux nhung khong thanh cong
-        if [ -f /tmp/echbay_vpssim_disable_selinux ]; then
+        if [ -f /tmp/n76i_vpssim_disable_selinux ]; then
             echo "Please disable SELinux and re-instal..."
             echo "Using command:"
             echo "nano /etc/selinux/config"
@@ -83,7 +83,7 @@ if [ "$selinux_on_off" = "ENABLED" ]; then
         #sudo chmod 644 /etc/selinux/config
 
         #
-        echo "ECHBAY-VPSSIM disable SELinux" > /tmp/echbay_vpssim_disable_selinux
+        echo "N76I-VPSSIM disable SELinux" > /tmp/n76i_vpssim_disable_selinux
 
         # check after change
         check_selinux_disable=$(grep SELINUX=disabled /etc/selinux/config)
@@ -112,11 +112,11 @@ if [ "$selinux_on_off" = "ENABLED" ]; then
 fi
 
 #
-rm -rf /tmp/echbay_vpssim_disable_selinux
+rm -rf /tmp/n76i_vpssim_disable_selinux
 
 
 #
 cd ~
-cd /opt/echbay_vpssim
+cd /opt/n76i_vpssim
 chmod +x setup
 bash setup

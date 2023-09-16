@@ -1,4 +1,4 @@
-All Nginx Versions for ECHBAY-VPSSIM Server ! http://nginx.org/en/download.html
+All Nginx Versions for N76I-VPSSIM Server ! http://nginx.org/en/download.html
 |1.24.0|
 |1.22.1|
 |1.22.0|

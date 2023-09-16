@@ -1,4 +1,4 @@
-All phpMyAdmin Versions for ECHBAY-VPSSIM Server ! https://www.phpmyadmin.net/downloads/
+All phpMyAdmin Versions for N76I-VPSSIM Server ! https://www.phpmyadmin.net/downloads/
 |5.2.1|
 |5.2.0|
 |5.1.1|

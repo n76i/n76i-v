@@ -3,40 +3,40 @@
 
 # copy code tu file install sang
 cd ~
-wget --no-check-certificate -q https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/vpssim/menu/git-clone
+wget --no-check-certificate -q https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/menu/git-clone
 chmod +x /root/git-clone
 bash /root/git-clone
 
 
-# BEGIN update ECHBAY-VPSSIM main
+# BEGIN update N76I-VPSSIM main
 if [ "$(rpm -q --qf "%{VERSION}" $(rpm -q --whatprovides redhat-release))" == "7" ]; then
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/motd /etc/motd
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/motd /etc/motd
 
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/calc /bin/calc && chmod +x /bin/calc
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/calc /bin/calc && chmod +x /bin/calc
 fi
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/vpssim /bin/vpssim && chmod +x /bin/vpssim
-# BEGIN update ECHBAY-VPSSIM main
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/vpssim /bin/vpssim && chmod +x /bin/vpssim
+# BEGIN update N76I-VPSSIM main
 
 
 rm -rf /home/vpssim.demo/errorpage_html/*
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/errorpage_html/. /home/vpssim.demo/errorpage_html/
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/errorpage_html/. /home/vpssim.demo/errorpage_html/
 
 
-# BEGIN update ECHBAY-VPSSIM menu
+# BEGIN update N76I-VPSSIM menu
 #rm -rf /etc/vpssim/menu/*
-#yes | cp -rf /opt/echbay_vpssim/script/vpssim/menu/. /etc/vpssim/menu/
+#yes | cp -rf /opt/n76i_vpssim/script/vpssim/menu/. /etc/vpssim/menu/
 
 # Chmod 755 Menu
-#/opt/echbay_vpssim/script/vpssim/menu/chmod-755-menu
-# END update ECHBAY-VPSSIM menu
+#/opt/n76i_vpssim/script/vpssim/menu/chmod-755-menu
+# END update N76I-VPSSIM menu
 
 
 # confirm done update
-yes | cp -rf /opt/echbay_vpssim/version /etc/vpssim/vpssim.version
+yes | cp -rf /opt/n76i_vpssim/version /etc/vpssim/vpssim.version
 
 
-#rm -rf /opt/echbay_vpssim/*
-#rm -rf /opt/echbay_vpssim
+#rm -rf /opt/n76i_vpssim/*
+#rm -rf /opt/n76i_vpssim
 sleep 1
 
 # enable auto update system

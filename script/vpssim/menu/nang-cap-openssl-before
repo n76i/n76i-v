@@ -1,6 +1,6 @@
 #!/bin/bash
 . /home/vpssim.conf
-. /opt/echbay_vpssim/script/vpssim/nginx-setup.conf
+. /opt/n76i_vpssim/script/vpssim/nginx-setup.conf
 
 # check current open ssl version
 echo $(openssl version) > /tmp/current_openssl_version
@@ -11,7 +11,7 @@ echo $check_openssl_version
 
 # update if version not lasted
 if [ "$check_openssl_version" = "" ]; then
-/opt/echbay_vpssim/script/vpssim/menu/nang-cap-openssl-auto
+/opt/n76i_vpssim/script/vpssim/menu/nang-cap-openssl-auto
 else
 echo "OpenSSL lasted version..."
 fi

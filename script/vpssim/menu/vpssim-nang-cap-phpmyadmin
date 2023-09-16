@@ -2,7 +2,7 @@
 . /home/vpssim.conf
 php_version1=$(php -r "echo PHP_MAJOR_VERSION.'.'.PHP_MINOR_VERSION;")
 rm -rf /tmp/checktmp
-echo "Check /tmp by ECHBAY-VPSSIM" > /tmp/checktmp
+echo "Check /tmp by N76I-VPSSIM" > /tmp/checktmp
 if [ ! -f /tmp/checktmp ]; then
 clear
 echo "========================================================================="
@@ -39,7 +39,7 @@ if [ ! "$curTime" = "$fileTime2" ]; then
 echo "Download 0-all-phpmyadmin-version.txt..."
 cd /tmp
 rm -rf 00-all-phpmyadmin-version*
-wget --no-check-certificate -q https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/vpssim/00-all-phpmyadmin-version.txt
+wget --no-check-certificate -q https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/00-all-phpmyadmin-version.txt
 fi
 
 cd ~
@@ -142,7 +142,7 @@ echo "Tim thay phpMyAdmin phien ban $phpmyadmin_version tren phpmyadmin.net"
 echo "-------------------------------------------------------------------------"
 echo "Phien ban phpMyAdmin ban dang su dung: $phpmyadinhientai"
 echo "-------------------------------------------------------------------------"
-echo "ECHBAY-VPSSIM se thay the phien ban $phpmyadinhientai bang phien ban $phpmyadmin_version"
+echo "N76I-VPSSIM se thay the phien ban $phpmyadinhientai bang phien ban $phpmyadmin_version"
 echo "-------------------------------------------------------------------------"
 echo "Please wait ..."
 sleep 3

@@ -251,7 +251,7 @@ cd ~
 
 # wordpres
 download_and_unzip_file "https://wordpress.org/latest.zip" "wp.zip" ""
-#download_and_unzip_file "https://echbay.com/daoloat/latest-vi.zip" "wp.zip" ""
+#download_and_unzip_file "https://n76i.com/daoloat/latest-vi.zip" "wp.zip" ""
 
 file_optimize(){
 f=$1
@@ -283,18 +283,18 @@ if [ -d $1 ]; then
 fi
 }
 
-# echbaydotcom
-download_and_unzip_file "https://github.com/itvn9online/echbaydotcom/archive/master.zip" "echbaydotcom.zip" ""
-remove_single_comment_line "/root/wp-all-update/echbaydotcom-master/javascript"
-remove_single_comment_line "/root/wp-all-update/echbaydotcom-master/css"
+# n76idotcom
+download_and_unzip_file "https://github.com/n76i/n76idotcom/archive/master.zip" "n76idotcom.zip" ""
+remove_single_comment_line "/root/wp-all-update/n76idotcom-master/javascript"
+remove_single_comment_line "/root/wp-all-update/n76idotcom-master/css"
 
-download_and_unzip_file "https://github.com/itvn9online/webgiareorg/archive/refs/heads/main.zip" "webgiareorg.zip" ""
+download_and_unzip_file "https://github.com/n76i/webgiareorg/archive/refs/heads/main.zip" "webgiareorg.zip" ""
 remove_single_comment_line "/root/wp-all-update/webgiareorg-main/public/javascript"
 remove_single_comment_line "/root/wp-all-update/webgiareorg-main/public/css"
 
-download_and_unzip_file "https://github.com/itvn9online/echbaytwo/archive/master.zip" "echbaytwo.zip" ""
-remove_single_comment_line "/root/wp-all-update/echbaytwo-master/javascript"
-remove_single_comment_line "/root/wp-all-update/echbaytwo-master/css"
+download_and_unzip_file "https://github.com/n76i/n76itwo/archive/master.zip" "n76itwo.zip" ""
+remove_single_comment_line "/root/wp-all-update/n76itwo-master/javascript"
+remove_single_comment_line "/root/wp-all-update/n76itwo-master/css"
 #exit
 
 # download wordpress plugin hay dung nhat -> moi cap nhat chuc nang tim va download tu dong -> khong can phai thiet lap thu cong nua
@@ -392,19 +392,19 @@ echo "wordpress not exist"
 exit
 fi
 
-# unzip echbaydotcom
-if [ -d /root/wp-all-update/echbaydotcom-master ]; then
-rm -rf /root/wp-all-update/echbaydotcom-master/.gitattributes
-rm -rf /root/wp-all-update/echbaydotcom-master/.gitignore
+# unzip n76idotcom
+if [ -d /root/wp-all-update/n76idotcom-master ]; then
+rm -rf /root/wp-all-update/n76idotcom-master/.gitattributes
+rm -rf /root/wp-all-update/n76idotcom-master/.gitignore
 # chinh lai thoi gian cap nhat
-if [ -f /root/wp-all-update/echbaydotcom-master/readme.txt ]; then
-	touch -d "$(date)" /root/wp-all-update/echbaydotcom-master/readme.txt
+if [ -f /root/wp-all-update/n76idotcom-master/readme.txt ]; then
+	touch -d "$(date)" /root/wp-all-update/n76idotcom-master/readme.txt
 fi
 
-# unzip code trong outsource cua echbaydotcom
+# unzip code trong outsource cua n76idotcom
 cd ~
-if [ -d /root/wp-all-update/echbaydotcom-master/outsource ]; then
-cd /root/wp-all-update/echbaydotcom-master/outsource
+if [ -d /root/wp-all-update/n76idotcom-master/outsource ]; then
+cd /root/wp-all-update/n76idotcom-master/outsource
 for f_unzip in ./*.zip
 do
 echo $f_unzip
@@ -414,7 +414,7 @@ cd ~
 fi
 
 fi
-# END unzip echbaydotcom
+# END unzip n76idotcom
 
 # unzip webgiareorg
 if [ -d /root/wp-all-update/webgiareorg-main ]; then
@@ -440,19 +440,19 @@ fi
 fi
 # END unzip webgiareorg
 
-# unzip echbaytwo
-if [ -d /root/wp-all-update/echbaytwo-master ]; then
-rm -rf /root/wp-all-update/echbaytwo-master/.gitattributes
-rm -rf /root/wp-all-update/echbaytwo-master/.gitignore
+# unzip n76itwo
+if [ -d /root/wp-all-update/n76itwo-master ]; then
+rm -rf /root/wp-all-update/n76itwo-master/.gitattributes
+rm -rf /root/wp-all-update/n76itwo-master/.gitignore
 # chinh lai thoi gian cap nhat
-if [ -f /root/wp-all-update/echbaytwo-master/index.php ]; then
-	touch -d "$(date)" /root/wp-all-update/echbaytwo-master/index.php
+if [ -f /root/wp-all-update/n76itwo-master/index.php ]; then
+	touch -d "$(date)" /root/wp-all-update/n76itwo-master/index.php
 fi
 
-# unzip code trong outsource cua echbaytwo
+# unzip code trong outsource cua n76itwo
 cd ~
-if [ -d /root/wp-all-update/echbaytwo-master/outsource ]; then
-cd /root/wp-all-update/echbaytwo-master/outsource
+if [ -d /root/wp-all-update/n76itwo-master/outsource ]; then
+cd /root/wp-all-update/n76itwo-master/outsource
 for f_unzip in ./*.zip
 do
 echo $f_unzip
@@ -462,7 +462,7 @@ cd ~
 fi
 
 fi
-# END unzip echbaytwo
+# END unzip n76itwo
 
 # phan quyen cho nginx quan ly
 id -u nginx
@@ -542,8 +542,8 @@ fi
 }
 
 send_warning_via_telegram(){
-	#wget --no-check-certificate -O /dev/null "https://cloud.echbay.com/backups/has_malware?source="$2"&path="$1
-	curl --data "source="$2"&path="$1 https://cloud.echbay.com/backups/has_malware
+	#wget --no-check-certificate -O /dev/null "https://cloud.n76i.com/backups/has_malware?source="$2"&path="$1
+	curl --data "source="$2"&path="$1 https://cloud.n76i.com/backups/has_malware
 	echoY $2
 }
 
@@ -640,56 +640,56 @@ if [ $2 -lt $3 ]; then
 
 					fi
 
-					# chi su dung echbaydotcom hoac webgiareorg
-					if [ -d "$get_d/wp-content/echbaydotcom" ] && [ -d "$get_d/wp-content/webgiareorg" ]; then
-						# neu co echbaytwo
-						if [ -d "$get_d/wp-content/themes/echbaytwo" ]; then
+					# chi su dung n76idotcom hoac webgiareorg
+					if [ -d "$get_d/wp-content/n76idotcom" ] && [ -d "$get_d/wp-content/webgiareorg" ]; then
+						# neu co n76itwo
+						if [ -d "$get_d/wp-content/themes/n76itwo" ]; then
 							# xoa webgiareorg
 							rm -rf $get_d/wp-content/webgiareorg/*
 							rm -rf $get_d/wp-content/webgiareorg
 						elif [ -d "$get_d/wp-content/themes/flatsome" ]; then
-							# xoa echbaydotcom
-							rm -rf $get_d/wp-content/echbaydotcom/*
-							rm -rf $get_d/wp-content/echbaydotcom
+							# xoa n76idotcom
+							rm -rf $get_d/wp-content/n76idotcom/*
+							rm -rf $get_d/wp-content/n76idotcom
 						fi
 					fi
 
-					# echbaydotcom
-					if [ -d /root/wp-all-update/echbaydotcom-master ] && [ -d "$get_d/wp-content/echbaydotcom" ]; then
+					# n76idotcom
+					if [ -d /root/wp-all-update/n76idotcom-master ] && [ -d "$get_d/wp-content/n76idotcom" ]; then
 						# nếu tồn tại cả thư mục webgiareorg -> cảnh báo ngay
 						if [ -d "$get_d/wp-content/webgiareorg" ]; then
-							echoR "echbaydotcom AND webgiareorg EXIST..."
+							echoR "n76idotcom AND webgiareorg EXIST..."
 							echo $get_d >> /root/update-wordpress-for-all-site-log.txt
 							#sleep 30;
 						fi
 						
-						echoY "cleanup - - - echbaydotcom..."
-						remove_code_and_htaccess $get_d/wp-content/echbaydotcom
-						echoG "rsync - - - echbaydotcom..."
-						rsync -ah /root/wp-all-update/echbaydotcom-master/* $get_d/wp-content/echbaydotcom/ > /dev/null 2>&1
-						#chown -R nginx:nginx $get_d/wp-content/echbaydotcom
+						echoY "cleanup - - - n76idotcom..."
+						remove_code_and_htaccess $get_d/wp-content/n76idotcom
+						echoG "rsync - - - n76idotcom..."
+						rsync -ah /root/wp-all-update/n76idotcom-master/* $get_d/wp-content/n76idotcom/ > /dev/null 2>&1
+						#chown -R nginx:nginx $get_d/wp-content/n76idotcom
 
-						# echbaytwo
-						if [ -d /root/wp-all-update/echbaytwo-master ] && [ -d "$get_d/wp-content/themes/echbaytwo" ]; then
-							echoY "cleanup - - - echbaytwo..."
-							remove_code_and_htaccess $get_d/wp-content/themes/echbaytwo
-							echoG "rsync - - - echbaytwo..."
-							rsync -ah /root/wp-all-update/echbaytwo-master/* $get_d/wp-content/themes/echbaytwo/ > /dev/null 2>&1
-							#chown -R nginx:nginx $get_d/wp-content/themes/echbaytwo
+						# n76itwo
+						if [ -d /root/wp-all-update/n76itwo-master ] && [ -d "$get_d/wp-content/themes/n76itwo" ]; then
+							echoY "cleanup - - - n76itwo..."
+							remove_code_and_htaccess $get_d/wp-content/themes/n76itwo
+							echoG "rsync - - - n76itwo..."
+							rsync -ah /root/wp-all-update/n76itwo-master/* $get_d/wp-content/themes/n76itwo/ > /dev/null 2>&1
+							#chown -R nginx:nginx $get_d/wp-content/themes/n76itwo
 							
 							# copy file index-tmp.php de active WP_ACTIVE_WGR_SUPPER_CACHE luon va ngay
-							if [ -f "$get_d/wp-content/echbaydotcom/index-tmp.php" ]; then
+							if [ -f "$get_d/wp-content/n76idotcom/index-tmp.php" ]; then
 								echoG "active WP ACTIVE WGR SUPPER CACHE..."
-								yes | cp -rf $get_d/wp-content/echbaydotcom/index-tmp.php $get_d/index.php
+								yes | cp -rf $get_d/wp-content/n76idotcom/index-tmp.php $get_d/index.php
 							fi
 						fi
 					fi
 					
 					# webgiareorg
 					if [ -d /root/wp-all-update/webgiareorg-main ] && [ -d "$get_d/wp-content/webgiareorg" ]; then
-						# và không được có theme echbaytwo
-						if [ -d "$get_d/wp-content/themes/echbaytwo" ]; then
-							echoY "continue - - - echbaytwo..."
+						# và không được có theme n76itwo
+						if [ -d "$get_d/wp-content/themes/n76itwo" ]; then
+							echoY "continue - - - n76itwo..."
 						# chỉ chạy khi có theme flatsome đi kèm
 						elif [ -d "$get_d/wp-content/themes/flatsome" ]; then
 							echoY "cleanup - - - webgiareorg..."
@@ -716,8 +716,8 @@ if [ $2 -lt $3 ]; then
 
 					# dọn dẹp code dư thừa của backup
 					echoY "Cleanup EB update code..."
-					rm -rf $get_d/wp-content/echbaydotcom-*
-					rm -rf $get_d/wp-content/themes/echbaytwo-*
+					rm -rf $get_d/wp-content/n76idotcom-*
+					rm -rf $get_d/wp-content/themes/n76itwo-*
 					rm -rf $get_d/wp-content/webgiareorg-*
 					# dọn dẹp file thừa do lỗi update của webgiareorg trước đây
 					rm -rf $get_d/EB_THEME_CACHE-*

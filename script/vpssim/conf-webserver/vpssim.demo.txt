@@ -68,7 +68,7 @@ access_log        /dev/null;
 log_not_found     off;
 error_log         /dev/null;
 root /home/vpssim.demo/private_html;
-auth_basic "Authorization Required ( Get User & Password at /home/VPSSIM-manage-info.txt or Create new one by : ECHBAY-VPSSIM menu ->  User & Password Mac Dinh )";
+auth_basic "Authorization Required ( Get User & Password at /home/VPSSIM-manage-info.txt or Create new one by : N76I-VPSSIM menu ->  User & Password Mac Dinh )";
 auth_basic_user_file  /etc/nginx/.htpasswd;
 index index.php index.html index.htm;
 server_name vpssim.demo;

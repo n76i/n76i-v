@@ -60,9 +60,9 @@ rm -rf /tmp/vpssimSetConfigFile
 
 
 if [ ! -d /etc/vpssim/errorpage_html ]; then
-	if [ -d /opt/echbay_vpssim/script/vpssim/errorpage_html ]; then
+	if [ -d /opt/n76i_vpssim/script/vpssim/errorpage_html ]; then
 		mkdir -p /etc/vpssim/errorpage_html ; chmod 755 /etc/vpssim/errorpage_html
-		yes | cp -rf /opt/echbay_vpssim/script/vpssim/errorpage_html/. /etc/vpssim/errorpage_html/
+		yes | cp -rf /opt/n76i_vpssim/script/vpssim/errorpage_html/. /etc/vpssim/errorpage_html/
 	fi
 fi
 

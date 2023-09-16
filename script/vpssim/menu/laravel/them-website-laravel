@@ -3,11 +3,11 @@
 . /home/vpssim.conf
 
 # vi du
-# /etc/vpssim/menu/laravel/them-website-laravel "/home/user26126/dfea22860915215cb76e09557237856c" "8" "user26126" "echbay"
+# /etc/vpssim/menu/laravel/them-website-laravel "/home/user26126/dfea22860915215cb76e09557237856c" "8" "user26126" "n76i"
 # $1 -> thu muc cai dat
 # $2 -> phien ban laravel
 # $3 -> user cai dat
-# $4 -> cai dat tu echbay
+# $4 -> cai dat tu n76i
 
 #
 cd ~
@@ -15,7 +15,7 @@ cd ~
 dir_install=$1
 laravel_version=$2
 user_chown=$3
-echbay_connect=$4
+n76i_connect=$4
 
 # mac dinh cho vao home
 if [ "$dir_install" = "" ]; then
@@ -101,6 +101,6 @@ echo "All done!"
 echo "Laravel "$laravel_version" has been download to: "$dir_sub_install
 
 #
-if [ "$echbay_connect" = "" ]; then
+if [ "$n76i_connect" = "" ]; then
 /etc/vpssim/menu/vpssim-them-website-menu
 fi

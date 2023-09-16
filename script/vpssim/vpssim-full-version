@@ -3,7 +3,7 @@
 curTime=$(date +%d)
 checktruenumber='^[0-9]+$'
 if [ $(id -u) != "0" ]; then
-    printf "Co loi ! ECHBAY-VPSSIM chi chay tren user root !\n"
+    printf "Co loi ! N76I-VPSSIM chi chay tren user root !\n"
     exit
 fi
 
@@ -16,8 +16,8 @@ fi
 fileTime=$(date -r /tmp/00-all-nginx-version.txt +%d)
 if [ ! "$fileTime" == "$curTime" ]; then
 rm -rf /tmp/00-all-nginx-version.txt
-#wget -q https://vpssim.echbay.com/script/vpssim/00-all-nginx-version.txt -O /tmp/00-all-nginx-version.txt
-wget --no-check-certificate -q https://raw.githubusercontent.com/itvn9online/vpssim-free/master/script/vpssim/00-all-nginx-version.txt -O /tmp/00-all-nginx-version.txt
+#wget -q https://vpssim.n76i.com/script/vpssim/00-all-nginx-version.txt -O /tmp/00-all-nginx-version.txt
+wget --no-check-certificate -q https://raw.githubusercontent.com/n76i/n76i-v/master/script/vpssim/00-all-nginx-version.txt -O /tmp/00-all-nginx-version.txt
 touch /tmp/00-all-nginx-version.txt
 Nginx1=`cat /etc/vpssim/nginx.version`
 checksize=$(du -sb /tmp/00-all-nginx-version.txt | awk 'NR==1 {print $1}')
@@ -31,7 +31,7 @@ cat >> "/tmp/vpssim_check_nginx" <<END
 			echo "-------------------------------------------------------------------------"
 			echo "Your Version: $Nginx1   |   Newest version: $Nginx3"
 			echo "-------------------------------------------------------------------------"
-			echo "How to update: ECHBAY-VPSSIM menu => Update System => Change Nginx Version "
+			echo "How to update: N76I-VPSSIM menu => Update System => Change Nginx Version "
 			
 			fi
 		fi
@@ -53,8 +53,8 @@ fi
 fileTime2=$(date -r /tmp/vpssim.newversion +%d)
 if [ ! "$fileTime2" == "$curTime" ]; then
 rm -rf /tmp/vpssim.newversion
-#wget -q https://vpssim.echbay.com/script/vpssim/vpssim.newversion -O /tmp/vpssim.newversion
-wget --no-check-certificate -q https://raw.githubusercontent.com/itvn9online/vpssim-free/master/version -O /tmp/vpssim.newversion
+#wget -q https://vpssim.n76i.com/script/vpssim/vpssim.newversion -O /tmp/vpssim.newversion
+wget --no-check-certificate -q https://raw.githubusercontent.com/n76i/n76i-v/master/version -O /tmp/vpssim.newversion
 touch /tmp/vpssim.newversion
 LOCALVER=`cat /etc/vpssim/vpssim.version`
 checksize=$(du -sb /tmp/vpssim.newversion | awk 'NR==1 {print $1}')
@@ -64,11 +64,11 @@ checksize=$(du -sb /tmp/vpssim.newversion | awk 'NR==1 {print $1}')
 	cat >> "/tmp/vpssim_check_vpssim_version" <<END
 		if [ ! "$LOCALVER" == "$REMOVER" ]; then
 			echo "========================================================================="
-			echo "Update for ECHBAY-VPSSIM found !  "
+			echo "Update for N76I-VPSSIM found !  "
 			echo "-------------------------------------------------------------------------"
 			echo "Your Version: $LOCALVER   |   Newest version: $REMOVER"
 			echo "-------------------------------------------------------------------------"
-			echo "How to update: ECHBAY-VPSSIM menu => Update System => Update ECHBAY-VPSSIM "
+			echo "How to update: N76I-VPSSIM menu => Update System => Update N76I-VPSSIM "
 			
 		fi
 END
@@ -110,7 +110,7 @@ echo "VPSSIM da them IP nay vao CSF whitelist de khong bi CSF Firewall Block"
 echo "-------------------------------------------------------------------------"
 echo "De thay doi co hieu luc, CSF Firewall can khoi dong lai"
 echo "========================================================================="
-read -p "Nhan [Enter] de khoi dong lai CSF Firewall va Truy cap ECHBAY-VPSSIM ..."
+read -p "Nhan [Enter] de khoi dong lai CSF Firewall va Truy cap N76I-VPSSIM ..."
 #iptables -I INPUT -p tcp --dport $priport -j ACCEPT
 #iptables -A INPUT -p tcp -s $checkip --dport $priport -j ACCEPT
 #service iptables save
@@ -155,9 +155,9 @@ prompt="Nhap lua chon cua ban:"
 options=("Them Website & Code" "Xoa website" "Backup & Restore Code" "Quan Ly Database" "Quan Ly phpMyAdmin" "Quan Ly Zend OPcache" "Quan Ly Memcached" "Quan Ly Redis Cache" "Quan Ly FTP Server" "Quan Ly Swap" "Quan Ly Cronjob"  "Quan Ly File Log" "Config Cau Hinh PHP" "Wordpress Blog Tools" "Quan Ly CSF Firewall" "Quan Ly IPtables Firewall" "Quan Ly BitTorrent Sync" "Quan Ly VPS Backup" "Linux Malware Detect" "Cai Dat File Manager" "Cai Dat Net2FTP" "Cai Dat NetData" "Cai Dat SSL (Let's Enctypt)" "Check & Block IP DOS" "Tien ich - Addons" "Update System" "Clear All Caches" "User & Password Mac Dinh" "Server Status" "Thoat")
 
 echo "========================================================================="
-echo "    ECHBAY-VPSSIM - Quan Ly VPS/ Server by EchBay.com ($(cat /etc/vpssim/vpssim.version))                "
+echo "    N76I-VPSSIM - Quan Ly VPS/ Server by EchBay.com ($(cat /etc/vpssim/vpssim.version))                "
 echo "========================================================================="
-echo "                          ECHBAY-VPSSIM Menu                             "
+echo "                          N76I-VPSSIM Menu                             "
 echo "========================================================================="
 
 PS3="$prompt"

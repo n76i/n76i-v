@@ -3,20 +3,20 @@
 cd ~
 mkdir -p /etc/nginx/conf
 
-download_echbay_nginx_config(){
-wget --no-check-certificate -q "https://echbay.com/server/conf/index.php?file=$1&download=1&rand=1" -O /etc/nginx/conf/$1.conf
+download_n76i_nginx_config(){
+wget --no-check-certificate -q "https://n76i.com/server/conf/index.php?file=$1&download=1&rand=1" -O /etc/nginx/conf/$1.conf
 chmod 755 /etc/nginx/conf/$1.conf
 }
-#download_echbay_nginx_config "ddos1"
-#download_echbay_nginx_config "ddos2"
-#download_echbay_nginx_config "ssl"
-download_echbay_nginx_config "all"
-download_echbay_nginx_config "block"
-download_echbay_nginx_config "staticfiles"
-download_echbay_nginx_config "drop"
+#download_n76i_nginx_config "ddos1"
+#download_n76i_nginx_config "ddos2"
+#download_n76i_nginx_config "ssl"
+download_n76i_nginx_config "all"
+download_n76i_nginx_config "block"
+download_n76i_nginx_config "staticfiles"
+download_n76i_nginx_config "drop"
 
 #
-wget --no-check-certificate -q "https://echbay.com/server/conf/index.php?file=ssl_ciphers_vpssim&download=1&rand=1" -O /etc/nginx/ssl_ciphers_vpssim.conf
+wget --no-check-certificate -q "https://n76i.com/server/conf/index.php?file=ssl_ciphers_vpssim&download=1&rand=1" -O /etc/nginx/ssl_ciphers_vpssim.conf
 chmod 755 /etc/nginx/ssl_ciphers_vpssim.conf
 
 #
@@ -26,8 +26,8 @@ chmod 755 /etc/nginx/conf/*
 
 
 #
-download_echbay_custom_nginx_config(){
-wget --no-check-certificate -q "https://raw.githubusercontent.com/itvn9online/vpssim-free/master/directadmin/data/templates/custom/$1.conf" -O $1.conf ; chmod 755 $1.conf
+download_n76i_custom_nginx_config(){
+wget --no-check-certificate -q "https://raw.githubusercontent.com/n76i/n76i-v/master/directadmin/data/templates/custom/$1.conf" -O $1.conf ; chmod 755 $1.conf
 }
 
 cd ~
@@ -35,20 +35,20 @@ mkdir -p /usr/local/directadmin/data/templates/custom
 
 #
 cd /usr/local/directadmin/data/templates/custom
-download_echbay_custom_nginx_config "nginx_server"
-download_echbay_custom_nginx_config "nginx_server_secure"
-download_echbay_custom_nginx_config "nginx_server_secure_sub"
-download_echbay_custom_nginx_config "nginx_server_sub"
+download_n76i_custom_nginx_config "nginx_server"
+download_n76i_custom_nginx_config "nginx_server_secure"
+download_n76i_custom_nginx_config "nginx_server_secure_sub"
+download_n76i_custom_nginx_config "nginx_server_sub"
 
 
 # file custom cho tất cả domain
-download_echbay_custom_n_config(){
-wget --no-check-certificate -q "https://raw.githubusercontent.com/itvn9online/vpssim-free/master/directadmin/data/templates/custom/nginx_server.conf.CUSTOM.3.txt" -O $1.conf.CUSTOM.3.pre ; chmod 755 $1.conf.CUSTOM.3.pre
+download_n76i_custom_n_config(){
+wget --no-check-certificate -q "https://raw.githubusercontent.com/n76i/n76i-v/master/directadmin/data/templates/custom/nginx_server.conf.CUSTOM.3.txt" -O $1.conf.CUSTOM.3.pre ; chmod 755 $1.conf.CUSTOM.3.pre
 }
-download_echbay_custom_n_config "nginx_server"
-download_echbay_custom_n_config "nginx_server_secure"
-download_echbay_custom_n_config "nginx_server_secure_sub"
-download_echbay_custom_n_config "nginx_server_sub"
+download_n76i_custom_n_config "nginx_server"
+download_n76i_custom_n_config "nginx_server_secure"
+download_n76i_custom_n_config "nginx_server_secure_sub"
+download_n76i_custom_n_config "nginx_server_sub"
 
 #
 cd ~

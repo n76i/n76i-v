@@ -2,9 +2,9 @@
 
 
 cd ~
-if [ -d /opt/echbay_vpssim ]; then
-rm -rf /opt/echbay_vpssim/*
-rm -rf /opt/echbay_vpssim
+if [ -d /opt/n76i_vpssim ]; then
+rm -rf /opt/n76i_vpssim/*
+rm -rf /opt/n76i_vpssim
 #sleep 5
 fi
 
@@ -15,27 +15,27 @@ sudo yum -y install unzip
 
 # ưu tiên download file zip cho nó nhanh
 cd /tmp
-wget --no-check-certificate https://github.com/itvn9online/vpssim-free/archive/refs/heads/master.zip -O vpssim-free.zip
-unzip -q vpssim-free.zip
+wget --no-check-certificate https://github.com/n76i/n76i-v/archive/refs/heads/master.zip -O n76i-v.zip
+unzip -q n76i-v.zip
 cd ~
-if [ -d /tmp/vpssim-free-master ]; then
-    mkdir -p /opt/echbay_vpssim ; chmod 755 /opt/echbay_vpssim
-    yes | cp -rf /tmp/vpssim-free-master/. /opt/echbay_vpssim/
-    rm -rf /tmp/vpssim-free*
+if [ -d /tmp/n76i-v-master ]; then
+    mkdir -p /opt/n76i_vpssim ; chmod 755 /opt/n76i_vpssim
+    yes | cp -rf /tmp/n76i-v-master/. /opt/n76i_vpssim/
+    rm -rf /tmp/n76i-v*
 else
     echo "Install git..."
     sudo yum -y install git
 
     # update code
-    if [ -d /opt/echbay_vpssim ]; then
-        cd ~ ; cd /opt/echbay_vpssim && git pull ; cd ~
-        #git commit -m "ECHBAY-VPSSIM commit"
+    if [ -d /opt/n76i_vpssim ]; then
+        cd ~ ; cd /opt/n76i_vpssim && git pull ; cd ~
+        #git commit -m "N76I-VPSSIM commit"
         #git pull origin master
         #git pull origin
         #git merge origin master
         # or clone new
     else
-        git clone https://github.com/itvn9online/vpssim-free /opt/echbay_vpssim
+        git clone https://github.com/n76i/n76i-v /opt/n76i_vpssim
     fi
 fi
 
@@ -44,20 +44,20 @@ cd ~
 
 #sleep 5
 
-find /opt/echbay_vpssim/script/vpssim/menu -type f -exec chmod 755 {} \;
-/opt/echbay_vpssim/script/vpssim/menu/git-clone-done
+find /opt/n76i_vpssim/script/vpssim/menu -type f -exec chmod 755 {} \;
+/opt/n76i_vpssim/script/vpssim/menu/git-clone-done
 
 #
-echo "update ECHBAY-VPSSIM menu"
+echo "update N76I-VPSSIM menu"
 mkdir -p /etc/vpssim/menu ; chmod 755 /etc/vpssim/menu
 rm -rf /etc/vpssim/menu/*
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/menu/. /etc/vpssim/menu/
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/menu/. /etc/vpssim/menu/
 
 echo "Chmod 755 Menu"
-/opt/echbay_vpssim/script/vpssim/menu/chmod-755-menu
+/opt/n76i_vpssim/script/vpssim/menu/chmod-755-menu
 
 #
-echo "update ECHBAY-VPSSIM conf"
+echo "update N76I-VPSSIM conf"
 mkdir -p /etc/nginx/conf ; chmod 755 /etc/nginx/conf
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/conf/. /etc/nginx/conf/
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/conf/. /etc/nginx/conf/
 find /etc/nginx/conf -type f -exec chmod 644 {} \;

@@ -1,12 +1,12 @@
 #!/bin/bash
 . /home/vpssim.conf
-. /opt/echbay_vpssim/script/vpssim/nginx-setup.conf
+. /opt/n76i_vpssim/script/vpssim/nginx-setup.conf
 
 #
 cd /usr/local/vpssim
 
-if [ -f /opt/echbay_vpssim/script/vpssim/module-nginx/${opensslversion}.tar.gz ]; then
-yes | cp -rf /opt/echbay_vpssim/script/vpssim/module-nginx/${opensslversion}.tar.gz ${opensslversion}.tar.gz
+if [ -f /opt/n76i_vpssim/script/vpssim/module-nginx/${opensslversion}.tar.gz ]; then
+yes | cp -rf /opt/n76i_vpssim/script/vpssim/module-nginx/${opensslversion}.tar.gz ${opensslversion}.tar.gz
 else
 wget -q --no-check-certificate https://www.openssl.org/source/${opensslversion}.tar.gz
 fi
