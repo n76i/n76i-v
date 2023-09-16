@@ -434,12 +434,10 @@ echo "Co gang start mariadb"
 systemctl start mariadb.service 
 echo "Mariadb da duoc start"
 
-echo "Dang config mysql"
-chkconfig --add mysql
-chkconfig --levels 235 mysql on
-systemctl enable mysql
-service mysql start
-echo "Mysql da duoc start"
+# chkconfig --add mysql
+# chkconfig --levels 235 mysql on
+# systemctl enable mysql
+# service mysql start
 #systemctl enable redis.service
 #systemctl start redis.service
 mkdir -p /home/vpssim.demo/public_html
